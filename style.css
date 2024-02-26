@@ -1,0 +1,112 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.calculator {
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Fix overflow */
+}
+
+.calculator .header {
+    background-color: #333;
+    /* Darker screen background color */
+    height: 120px;
+    border-radius: 10px 10px 0 0;
+}
+
+.calculator .header .input {
+    color: #ffffff;
+    /* Lighter text color */
+    text-align: right;
+    padding: 30px 40px;
+    font-size: 30px;
+}
+
+.calculator .keys {
+    background: linear-gradient(135deg, #3a3a3a, #000000);
+    height: 380px;
+    /* Adjusted height */
+    border-radius: 0 0 10px 10px;
+    font-size: 24px;
+    overflow: hidden;
+    /* Fix overflow */
+}
+
+.calculator .keys .row {
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+}
+
+.calculator .keys .row .number,
+.calculator .keys .row .symbol {
+    width: 25%;
+    /* Adjusted width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calculator .keys .row .number:hover,
+.calculator .keys .row .symbol:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calculator .keys .row .number span {
+    cursor: pointer;
+    color: #333;
+    /* Darker button text color */
+}
+
+.calculator .keys .row .symbol {
+    color: rgba(255, 255, 255, 0.714);
+}
+
+.calculator .keys .row .number.dull {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    /* Lighter dull button text color */
+}
+
+.calculator .keys .row .symbol.action {
+    background: linear-gradient(60deg, #ff0300, #ffa100);
+    color: #ffffff;
+    /* Action button text color */
+}
+
+.calculator .keys .row .number,
+.calculator .keys .row .symbol {
+    transition: transform 0.2s;
+}
+
+.calculator .keys .row .number:active,
+.calculator .keys .row .symbol:active {
+    transform: scale(0.95);
+}
+
+p.credit {
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    opacity: 0.8;
+}
